@@ -22,7 +22,7 @@
 - You can embed any JavaScript expression in JSX by wrapping it in curly braces `{}`.
 
     ```jsx
-    const name = 'John';
+    const name = 'Wasiq';
     const element = <h1>Hello, {name}!</h1>;
     ```
 
@@ -41,7 +41,7 @@
     ```
 
 ## 2. Introduction to Components
-
+!["Components in REACT"](https://info340.github.io/img/react/uimockscript.png)
 ### What are Components?
 
 - **Components** are the building blocks of a React application. They are reusable pieces of UI that can manage their own state and logic.
@@ -90,7 +90,7 @@
 - Let’s set up our project using Vite. Open your terminal and run:
 
     ```bash
-    npm create vite@latest todo-app --template react
+    npm create vite@latest todo-app
     cd todo-app
     npm install
     npm run dev
