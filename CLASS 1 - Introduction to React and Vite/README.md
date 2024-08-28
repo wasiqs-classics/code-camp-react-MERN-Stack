@@ -8,6 +8,8 @@ In this class we will cover the basics of REACT and Vite JS. We begin by revisin
 
 The web operates on a client-server model. The client (usually a web browser) sends a request to the server, which processes the request and sends back a response.
 
+!["Client - Server Model"](Client-server.png)
+
 **Example:** When you type a URL in your browser, the browser (client) sends a request to the server hosting that website. The server processes the request and sends back the HTML, CSS, and JavaScript files needed to display the website.
 
 ## 2\. Traditional Front-End Websites
@@ -61,6 +63,8 @@ Efficient: React updates and renders the right components when your data changes
 What is React DOM? React DOM is the package that provides DOM-specific methods that enable React to interact with the DOM.
 
 Difference from JS DOM: Unlike the traditional JavaScript DOM, which updates the entire DOM tree, React DOM uses a virtual DOM to optimize updates. The virtual DOM is a lightweight copy of the actual DOM. When changes occur, React updates the virtual DOM first, then compares it with the actual DOM, and only updates the parts that have changed.
+
+!["DOMS"](DOMS.png)
 
 ## Why React is Robust?
 
