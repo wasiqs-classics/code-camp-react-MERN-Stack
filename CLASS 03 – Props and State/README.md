@@ -171,7 +171,105 @@ function TodoList() {
 
 export default TodoList;
 ```
+Certainly! Let’s break down the code in `TodoList.jsx` step by step to understand how it works.
 
+### 1. Importing React and useState
+
+```javascript
+import React, { useState } from 'react';
+```
+
+- **React**: This is the main library that lets us build user interfaces using components.
+- **useState**: This is a React hook that allows functional components to have state. Before hooks, state management was only possible in class components. The `useState` hook returns two things:
+  - The current state (`todos` and `newTodo` in this case).
+  - A function to update that state (`setTodos` and `setNewTodo` in this case).
+
+### 2. Defining the `TodoList` Functional Component
+
+```javascript
+function TodoList() {
+```
+
+- This line defines a functional component called `TodoList`. Functional components are simpler than class components and are typically used for components that don’t require much logic or state management, though with hooks, they can handle state as well.
+
+### 3. Setting Up State Variables
+
+```javascript
+  const [todos, setTodos] = useState(['Learn React', 'Build a To-Do App']);
+  const [newTodo, setNewTodo] = useState('');
+```
+
+- **`[todos, setTodos] = useState(['Learn React', 'Build a To-Do App'])`:** 
+  - `todos` is a state variable that holds an array of to-do items. Initially, it contains two tasks: `'Learn React'` and `'Build a To-Do App'`.
+  - `setTodos` is a function that allows us to update the `todos` state.
+
+- **`[newTodo, setNewTodo] = useState('')`:**
+  - `newTodo` is another state variable that holds the current value of the input field (the new to-do item that the user is typing).
+  - `setNewTodo` is a function to update the `newTodo` state.
+
+### 4. Adding a New To-Do Item
+
+```javascript
+  const addTodo = () => {
+    if (newTodo.trim()) {
+      setTodos([...todos, newTodo]);
+      setNewTodo('');
+    }
+  };
+```
+
+- **`addTodo` function**:
+  - This function is called when the user clicks the "Add" button.
+  - **`newTodo.trim()`**: This checks if the `newTodo` string is not empty or only spaces (i.e., if there's something to add).
+  - **`setTodos([...todos, newTodo])`**:
+    - The `setTodos` function updates the `todos` array by adding the new to-do item to it.
+    - `[...]` is the spread operator, which creates a new array containing all items in the current `todos` array, plus the new item (`newTodo`).
+  - **`setNewTodo('')`**: This clears the input field by resetting `newTodo` to an empty string after the to-do is added.
+
+### 5. Rendering the Component
+
+```javascript
+  return (
+    <div>
+      <h2>To-Do List</h2>
+      <ul>
+        {todos.map((todo, index) => (
+          <li key={index}>{todo}</li>
+        ))}
+      </ul>
+      <input
+        type="text"
+        value={newTodo}
+        onChange={(e) => setNewTodo(e.target.value)}
+      />
+      <button onClick={addTodo}>Add</button>
+    </div>
+  );
+```
+
+- **`<h2>To-Do List</h2>`**: This is just a heading for the component.
+- **`<ul>` and `{todos.map((todo, index) => <li key={index}>{todo}</li>)}`**:
+  - `<ul>` is an unordered list element.
+  - `todos.map(...)` iterates over the `todos` array and creates a list item (`<li>`) for each to-do item.
+  - `key={index}`: React requires that you provide a unique `key` prop for each list item to help it manage lists more efficiently. Here, the index of the item in the array is used as the key.
+- **`<input type="text" value={newTodo} onChange={(e) => setNewTodo(e.target.value)} />`**:
+  - This is an input field where the user can type a new to-do item.
+  - `value={newTodo}` sets the value of the input field to the current `newTodo` state.
+  - `onChange={(e) => setNewTodo(e.target.value)}` updates the `newTodo` state whenever the user types something in the input field. `e.target.value` is the current value of the input field.
+- **`<button onClick={addTodo}>Add</button>`**:
+  - This is a button that, when clicked, calls the `addTodo` function to add the new to-do item to the list.
+
+### 6. Exporting the Component
+
+```javascript
+export default TodoList;
+```
+
+- This line exports the `TodoList` component so it can be imported and used in other parts of the application.
+
+### Summary
+
+This `TodoList` component is a simple example of how to use `useState` to manage the state in a functional React component. It allows a user to add new tasks to a to-do list, with each task being displayed as a list item. The `newTodo` state keeps track of what the user types in the input field, and the `todos` state keeps track of the list of tasks. When the user clicks "Add," the new task is added to the list and the input field is cleared.
 ### Connecting Props and State in Our To-Do App
 
 We can enhance our `TodoList` component by passing some initial tasks as props from the parent component.
