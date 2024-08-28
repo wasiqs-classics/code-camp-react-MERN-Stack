@@ -42,6 +42,7 @@
 
 ## 2. Introduction to Components
 !["Components in REACT"](https://info340.github.io/img/react/uimockscript.png)
+Image Courtesy: [Learn React GitHub](https://info340.github.io/react.html)
 ### What are Components?
 
 - **Components** are the building blocks of a React application. They are reusable pieces of UI that can manage their own state and logic.
