@@ -101,6 +101,25 @@ In this example, the `Greeting` component receives a `name` prop from the parent
   ```
 
   In this example, `count` is a piece of state, and `setCount` is the function used to update that state. When the button is clicked, the state changes, and the component re-renders with the updated count.
+  We can also use other ways to define functions here. Like:
+
+  Here's how you can convert that line of code to use a normal function instead of an arrow function:
+
+```jsx
+<button onClick={function() { setCount(count + 1); }}>
+```
+
+Or, if you want to define the function separately:
+
+```jsx
+function incrementCount() {
+  setCount(count + 1);
+}
+
+<button onClick={incrementCount}>
+```
+
+Both of these approaches achieve the same result, with the second example providing a named function that can be reused or tested separately if needed.
 
 ### Managing State in Class Components
 
