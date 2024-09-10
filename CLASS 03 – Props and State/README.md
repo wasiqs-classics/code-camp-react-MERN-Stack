@@ -121,7 +121,49 @@ function incrementCount() {
 
 Both of these approaches achieve the same result, with the second example providing a named function that can be reused or tested separately if needed.
 
-### Managing State in Class Components
+Great question! When you define a state in React using the `useState` hook, like this:
+
+```javascript
+const [count, setCount] = useState(0);
+```
+
+The `useState` hook returns an array with exactly two elements:
+
+1. The first element (`count` in this case) is the current state value.
+2. The second element (`setCount` in this case) is a function that you can use to update the state.
+
+### How React Knows `setCount` is a Function
+
+This behavior is built into the `useState` hook provided by React. Here’s how it works:
+
+- **React's `useState` Function**: When you call `useState(initialValue)`, React internally creates a piece of state for your component. It keeps track of this state and ensures it persists across re-renders.
+  
+- **Returning an Array**: `useState` returns an array with two items:
+  1. The first item is the current state value.
+  2. The second item is a setter function that you can call to update the state.
+
+Because the second item in the array is a function, React knows that when you call `setCount(newValue)`, it should update the `count` state to `newValue` and trigger a re-render of the component to reflect the updated state.
+
+### Example Breakdown
+
+In the example:
+
+```javascript
+const [count, setCount] = useState(0);
+```
+
+- `useState(0)` creates a state variable with an initial value of `0`.
+- React returns an array where:
+  - `count` is `0` (the initial value of the state).
+  - `setCount` is a function provided by React that you can use to update the value of `count`.
+
+When you later call `setCount(newValue)`, React:
+1. Updates the `count` state to `newValue`.
+2. Re-renders the component with the updated state.
+
+This is how React abstracts state management and provides you with the tools (`setCount`, in this case) to update the state in a predictable way.
+
+### Managing State in Class Components (Optional)
 
 - In **class components**, state is typically initialized in the constructor and updated using `this.setState`:
 
