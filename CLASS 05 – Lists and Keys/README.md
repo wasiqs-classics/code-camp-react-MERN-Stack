@@ -6,7 +6,7 @@
 - **Lists**: In React, lists are used to display a collection of data. They are typically rendered using the JavaScript `map()` function, which transforms an array of data into an array of React elements.
 
 #### Rendering Lists
-- **Using `map()`**: The `map()` function iterates over an array and returns a new array of elements.
+- **Using `map()`**: The `map()` function iterates over an array and returns a new array of elements. [Learn more about 'Map Method' in Javascript](https://github.com/wasiqs-classics/code-camp-react-MERN-Stack/blob/master/CLASS%2005%20%E2%80%93%20Lists%20and%20Keys/Map-Revision.md)
 - **Example**: Rendering a list of numbers:
 
 ```jsx
