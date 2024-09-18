@@ -182,63 +182,6 @@ function MultiInputForm() {
 export default MultiInputForm;
 ```
 
-### 3. Applying Forms and Controlled Components to the To-Do App
-
-#### Updating the To-Do App
-1. Update the `TodoList` component to include a form for adding new to-do items:
-
-```jsx
-import React, { useState } from 'react';
-
-function TodoList() {
-  const [todos, setTodos] = useState([
-    { id: 1, text: 'Learn React' },
-    { id: 2, text: 'Build a To-Do App' }
-  ]);
-  const [newTodo, setNewTodo] = useState('');
-
-  const handleInputChange = (e) => {
-    setNewTodo(e.target.value);
-  };
-
-  const handleAddTodo = (e) => {
-    e.preventDefault();
-    if (newTodo.trim()) {
-      const newTodoItem = {
-        id: todos.length + 1,
-        text: newTodo
-      };
-      setTodos([...todos, newTodoItem]);
-      setNewTodo('');
-    }
-  };
-
-  return (
-    <div>
-      <h2>To-Do List</h2>
-      {todos.length === 0 ? (
-        <p>No to-do items. Add a new task!</p>
-      ) : (
-        <ul>
-          {todos.map((todo) => (
-            <li key={todo.id}>{todo.text}</li>
-          ))}
-        </ul>
-      )}
-      <form onSubmit={handleAddTodo}>
-        <input
-          type="text"
-          value={newTodo}
-          onChange={handleInputChange}
-        />
-        <button type="submit">Add</button>
-      </form>
-    </div>
-  );
-}
-
-export default TodoList;
-```
 Let's break down the code block-by-block to understand how this `MultiInputForm` component works for handling multiple inputs in React:
 
 ### 1. **Importing React and `useState`**
@@ -352,6 +295,65 @@ This line exports the `MultiInputForm` component so it can be imported and used 
 - The form includes two input fields and a submit button, all handled with React state and event handling.
 
 This pattern allows you to manage forms with multiple fields efficiently by using a single state object instead of separate state variables for each input.
+
+### 3. Applying Forms and Controlled Components to the To-Do App
+
+#### Updating the To-Do App
+1. Update the `TodoList` component to include a form for adding new to-do items:
+
+```jsx
+import React, { useState } from 'react';
+
+function TodoList() {
+  const [todos, setTodos] = useState([
+    { id: 1, text: 'Learn React' },
+    { id: 2, text: 'Build a To-Do App' }
+  ]);
+  const [newTodo, setNewTodo] = useState('');
+
+  const handleInputChange = (e) => {
+    setNewTodo(e.target.value);
+  };
+
+  const handleAddTodo = (e) => {
+    e.preventDefault();
+    if (newTodo.trim()) {
+      const newTodoItem = {
+        id: todos.length + 1,
+        text: newTodo
+      };
+      setTodos([...todos, newTodoItem]);
+      setNewTodo('');
+    }
+  };
+
+  return (
+    <div>
+      <h2>To-Do List</h2>
+      {todos.length === 0 ? (
+        <p>No to-do items. Add a new task!</p>
+      ) : (
+        <ul>
+          {todos.map((todo) => (
+            <li key={todo.id}>{todo.text}</li>
+          ))}
+        </ul>
+      )}
+      <form onSubmit={handleAddTodo}>
+        <input
+          type="text"
+          value={newTodo}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Add</button>
+      </form>
+    </div>
+  );
+}
+
+export default TodoList;
+```
+
 
 ### 4. Using the Updated TodoList in App
 
