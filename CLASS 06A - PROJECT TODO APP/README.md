@@ -839,6 +839,7 @@ Now that you've built a basic Todo List app, here are some suggestions to furthe
 1. **Persisting Data**:
    - Implement `localStorage` to save tasks so they persist even after refreshing the page.
    - **Example**: Use `useEffect` to load tasks from `localStorage` on mount and save them whenever `tasks` state changes.
+   - [Implement Local Storage in to-do list](https://github.com/wasiqs-classics/code-camp-react-MERN-Stack/blob/master/CLASS%2006A%20-%20PROJECT%20TODO%20APP/ADDING-LOCAL-STORAGE.md)
 
 2. **Advanced Styling**:
    - Explore CSS frameworks like **Bootstrap** or **Tailwind CSS** for more sophisticated designs.
