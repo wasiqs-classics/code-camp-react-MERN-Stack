@@ -1,9 +1,12 @@
 ## Class 7: React Router
+!["React Router"](https://miro.medium.com/v2/resize:fit:1400/0*ID7KJ8DuspcjB343)
 
 ### 1. Introduction to Routing
 
 #### What is Routing?
 - **Routing**: In web development, routing refers to the mechanism of navigating between different pages or views in an application. It determines how an application responds to a client request for a specific endpoint, which is typically a URL path.
+- !["Traditional Routing"](https://miro.medium.com/v2/resize:fit:1400/1*9InkQRXKKf-SltX5ejh71g.png)
+
 
 #### Example of Routing in Traditional HTML/CSS/JS Projects
 - In traditional web development, routing is often handled by the server. When a user clicks a link, the browser sends a request to the server, which then responds with the appropriate HTML page.
@@ -44,6 +47,8 @@
 
 #### How Routing is Different in React Applications
 - Unlike traditional HTML routing, React applications use client-side routing. This means that the routing is handled within the browser using JavaScript, without requiring a full page reload. React Router is a popular library for implementing routing in React applications.
+- !["React Router System"](https://miro.medium.com/v2/resize:fit:1400/1*iyaMYa1qmLmw0p9eq-OuLQ.png)
+- Courtesy: [This article](https://medium.com/@chughrohit93.rc/navigating-the-web-traditional-routing-vs-react-routing-1fe1ecba8e36)
 
 #### Setting up React Router
 1. **Installation**:
@@ -446,4 +451,4 @@ In this class, we covered the basics of routing in React using React Router. We 
 
 By the end of this class, you should have a good understanding of how to implement routing in a React application, create nested routes, and build a simple portfolio SPA for John Doe (or yourself!). This knowledge will help you create more dynamic and interactive React applications.
 
-
+READ MORE: [More on React Routing](https://www.w3schools.com/react/react_router.asp)
