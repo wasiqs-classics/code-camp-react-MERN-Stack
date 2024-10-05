@@ -2,7 +2,7 @@
 
 ### Welcome Back!
 
-Up to this point, you have a foundational understanding of **React Hooks**—their existence and their basic purpose. In this class, we'll delve deeper into Hooks, exploring their concepts, purposes, and practical implementations. By the end of this tutorial, you'll have a solid grasp of how to manage state and side effects in your React applications using Hooks, as well as how to create your own custom Hooks for reusable logic.
+Up to this point, you've gained a foundational understanding of React, including **JSX**, **Components**, **Props**, **Event Handling**, **Conditional Rendering**, **Lists & Keys**, and **Forms with Controlled Components**. Now, it's time to delve deeper into one of the most powerful features React offers: **Hooks**. Although, you have a foundational understanding of **React Hooks**—their existence and their basic purpose. But in this class, we'll delve deeper into Hooks, exploring their concepts, purposes, and practical implementations. By the end of this tutorial, you'll have a solid grasp of how to manage state and side effects in your React applications using Hooks, as well as how to create your own custom Hooks for reusable logic.
 
 ---
 
