@@ -74,6 +74,7 @@ Imagine building a to-do application where each task can be added, removed, or t
 
 ```jsx
 const value = useContext(MyContext);
+```
 
 ### Combining `useReducer` and `useContext`
 
