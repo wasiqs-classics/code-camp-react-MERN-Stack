@@ -91,11 +91,13 @@ App
 
 In this structure, both `Navbar` and `Content` can access the theme context without needing to pass props through intermediate components.
 
+
 ---
 
 ## 3. Practical Example: Theme Management
 
 To solidify our understanding, let's create a simple **Theme Management** system using Context API. Users can toggle between light and dark themes, and the entire application will respond accordingly.
+!["Context API Structure"](https://github.com/wasiqs-classics/code-camp-react-MERN-Stack/blob/master/CLASS%2008%20%E2%80%93%20State%20Management%20with%20Context%20API/React%20Context%20API-2024-10-05-002938.png)
 
 ### Creating ThemeContext and ThemeProvider
 
@@ -345,7 +347,7 @@ react-context-api-demo/
 
 ---
 
-## 4. Advanced Usage
+## 4. Advanced Usage (Optional)
 
 ### Updating Context Values
 
